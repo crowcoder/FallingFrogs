@@ -126,7 +126,7 @@ var waititsfun = (function () {
 
             var gpad = gamepad.GetRightStick();
 
-            if(gpad){
+            if(gpad && gpad.direction !== 0){
                 if(gpad.direction === 8){
                     lilly.body.velocity.x = 450;
                 }else if(gpad.direction === 16){

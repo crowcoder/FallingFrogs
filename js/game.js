@@ -65,11 +65,12 @@ var waititsfun = (function () {
 
         create: function () {
             score = 0;
-            scoreboard = game.add.text(550, 10, '0');
-
+            
             cursors = game.input.keyboard.createCursorKeys();
-
+            
             game.add.tileSprite(0, 0, 640, 480, 'bkgrnd');
+            
+            scoreboard = game.add.text(0, 10, '0');
 
             water = game.add.sprite(0, 443, 'water');
             game.physics.arcade.enable(water);

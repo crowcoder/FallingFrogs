@@ -8,6 +8,7 @@ var waititsfun = (function () {
     var lilly, cursors, scoreboard, score, water, allfrogs;
     var frogs = [];
     var gameState = function (game) { };
+    var gamepad = new BrowserUtils.Controllers.Gamepad();
     var idleState = function(game){};
 
     idleState.prototype = {
@@ -123,7 +124,15 @@ var waititsfun = (function () {
 
             lilly.body.velocity.x = 0;
 
-            if (Phaser.Device.touch) {
+            var gpad = gamepad.GetRightStick();
+
+            if(gpad){
+                if(gpad.direction === 8){
+                    lilly.body.velocity.x = 450;
+                }else if(gpad.direction === 16){
+                    lilly.body.velocity.x = -450;
+                }
+            }else if (Phaser.Device.touch) {
                 if (game.input.pointer1.isDown) {
                     lilly.body.x = game.input.pointer1.x;
                 } else {

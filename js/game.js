@@ -161,7 +161,7 @@ var waititsfun = (function () {
 
     };
 
-    var game = new Phaser.Game(640, 480, Phaser.AUTO, 'gameDiv');
+    var game = new Phaser.Game(640, 480, Phaser.CANVAS, 'gameDiv');
     game.state.add(states.game, gameState);
     game.state.start(states.game);
 

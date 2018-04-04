@@ -121,7 +121,7 @@ var waititsfun = (function () {
                 }
             }
 
-            //game.physics.arcade.collide(allfrogs);
+            game.physics.arcade.collide(allfrogs);
 
             lilly.body.velocity.x = 0;
 

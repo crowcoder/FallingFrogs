@@ -29,6 +29,7 @@ var waititsfun = (function () {
             game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
             game.scale.pageAlignVertically = true;
             game.scale.pageAlignHorizontally = true;
+            game.desiredFps = 15;
 
         },
 

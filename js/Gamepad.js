@@ -28,9 +28,9 @@ var BrowserUtils;
                 //        })
                 //    }
                 //}
-                if (gamepads[1]) {
-                    var horizontal = gamepads[1].axes[2];
-                    var vertical = gamepads[1].axes[3];
+                if (gamepads[0]) {
+                    var horizontal = gamepads[0].axes[2];
+                    var vertical = gamepads[0].axes[3];
                     if (Math.abs(horizontal) > this.triggerThreshold || Math.abs(vertical) > this.triggerThreshold) {
                         if (horizontal < 0) {
                             xval = 16;
